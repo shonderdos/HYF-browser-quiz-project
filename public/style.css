@@ -1,5 +1,5 @@
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
   background-color: #ebf2fe;
 }
 
@@ -8,8 +8,6 @@ body {
   width: 100%;
   margin: 0;
   align-items: center;
-
-  
 }
 
 .flex-item {
@@ -18,48 +16,48 @@ body {
   margin: 0px 20px;
 }
 
-
-
 /* Styling the Start-Quiz button */
-#start-quiz-button, #next-question-button {
+#start-quiz-button,
+#next-question-button {
   border: none;
-  border-radius: 15px; 
+  border-radius: 15px;
   background: #242e49;
   color: white;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   cursor: pointer;
-  transition: 0.6s ease-in-out ;
+  transition: 0.6s ease-in-out;
   font-size: 1.5rem;
   margin-top: 100px;
 }
 
-#start-quiz-button:hover, #next-question-button:hover {
-  background: linear-gradient(to right, #242e49, #51618b); 
+#start-quiz-button:hover,
+#next-question-button:hover {
+  background: linear-gradient(to right, #242e49, #51618b);
 }
 
 /* Animation for the button */
 .animated-button {
   opacity: 0;
-  transform: translateY(60px); 
-  animation: fadeInUp 0.8s forwards; 
+  transform: translateY(60px);
+  animation: fadeInUp 0.8s forwards;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(60px); 
+    transform: translateY(60px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
   }
 }
 
 /* ----------------------- */
 #whiskers-image {
   width: 100%;
-  border-radius: 30px; 
+  border-radius: 30px;
 }
 
 /* Styling the Progress line */
@@ -68,11 +66,11 @@ body {
 }
 
 .progress-line .progress-line-image-container {
-  position: relative; 
+  position: relative;
 }
 
 .progress-line .progress-line-image {
-  width: 100%; 
+  width: 100%;
 }
 
 .progress-line .cat-icon {
@@ -82,7 +80,6 @@ body {
   width: 100px;
   height: auto;
 }
-
 
 /* Styling the player lives and timer */
 .player-lives-timer {
@@ -102,15 +99,14 @@ body {
 
 .player-lives img {
   margin-right: 10px;
-  width: 80px; 
+  width: 80px;
 }
 
 /* Styling the answers */
 #answers-list {
-  background-color:#98a7cd;
+  background-color: #98a7cd;
   padding: 0.6vw;
 }
-
 
 /* General styles */
 .centered {
