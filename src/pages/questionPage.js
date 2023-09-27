@@ -48,10 +48,8 @@ export const initQuestionPage = () => {
       if (currentQuestion.correct === targetBtn.target.textContent) {
         targetBtn.target.style.backgroundColor = 'green';
         disableBtns(answersListElement);
-        catProgress += roadLength / 11 ;
+        catProgress += roadLength / 11;
         catHead.style.left = `${catProgress}px`;
-
-        
       } else {
         targetBtn.target.style.backgroundColor = 'red';
         targetBtn.target.disabled = true;
