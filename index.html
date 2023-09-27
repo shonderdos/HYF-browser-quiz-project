@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf8" />
-    <title>Whiskers</title>
+<head>
+  <meta charset="utf8" />
+  <title>your project name</title>
 
-    <link href="./public/style.css" rel="stylesheet" />
-    <link rel="icon" href="imgs/favicon-icon.png" type="image/png" />
-  </head>
+  <link href="./public/style.css" rel="stylesheet" />
+  <link rel="icon" href="imgs/favicon-icon.png" type="image/png" />
+</head>
 
-  <body>
-    <!-- Put your HTML here -->
-    <div id="user-interface" class="centered"></div>
+<body>
+  <!-- Put your HTML here -->
+  <div id="cronometer">00:00</div>
+  <div id="user-interface" class="centered"></div>
+  <button id="playButton">Play</button>
+  <button id="resetButton">Restart</button>
+  <!-- your data -->
+  <script type="module" src="src/app.js"></script>
+  <script type="module" src="src/timer.js"></script>
+</body>
 
-    <!-- your data -->
-    <script type="module" src="src/app.js"></script>
-  </body>
 </html>
