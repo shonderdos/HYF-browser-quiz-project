@@ -9,7 +9,7 @@ export const createQuestionElement = (question) => {
   const element = document.createElement('div');
 
   // I use String.raw just to get fancy colors for the HTML in VS Code.
-  element.innerHTML = String.raw`
+  element.innerHTML = `
 
   <div class="player-lives-timer">
     <div class="player-lives">
@@ -24,8 +24,8 @@ export const createQuestionElement = (question) => {
   </div>
     <h1>${question}</h1>
 
-    <ul id="${ANSWERS_LIST_ID}">
-    </ul>
+    <div id="${ANSWERS_LIST_ID}">
+    </div>
 
     <button id="${NEXT_QUESTION_BUTTON_ID}" class="animated-button">
   Next question
@@ -37,7 +37,7 @@ export const createQuestionElement = (question) => {
   <div class="progress-line-image-container">
     <img src="imgs/home-path.svg" alt="Progress Line" class="progress-line-image">
     <!-- Cat-face for the progress -->
-    <img src="imgs/player-live.png" alt="Cat Icon" class="cat-icon">
+    <img id="cat-head" src="imgs/player-live.png" alt="Cat Icon" class="cat-icon">
   </div>
 </div>
 
