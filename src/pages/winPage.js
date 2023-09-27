@@ -6,5 +6,4 @@ export const initWinPage = () => {
 
   const winElement = createWinElement();
   userInterface.appendChild(winElement);
-
 };

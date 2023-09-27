@@ -6,5 +6,4 @@ export const initLostPage = () => {
 
   const lostElement = createLostElement();
   userInterface.appendChild(lostElement);
-
 };
