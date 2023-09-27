@@ -95,6 +95,7 @@ body {
   border-radius: 30px;
   background-color: #51618b;
   padding: 10px;
+  width: 255px;
 }
 
 .player-lives img {

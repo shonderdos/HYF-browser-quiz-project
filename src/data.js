@@ -1,60 +1,65 @@
-/* Program Data
-
-  in this file you can declare variables to store important data for your program
-  the data can only be primitives, objects or arrays
-  do not store dom elements in these variables!!!!
-
-  these variables will be imported by your handlers when necessary
-    not by your logic
-    not by your listeners
-*/
-
-export const quizData = {
-  currentQuestionIndex: 0,
-  // the questions in the quiz
-  questions: [
-    {
-      text: 'What are the different ways to declare a JS variable?',
-      answers: {
-        a: 'constant, let, variable',
-        b: 'var, const, let, function',
-        c: 'var, let, const',
-      },
-      correct: 'c',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/variables',
-        },
-        {
-          text: 'Tyler McGinnis',
-          href: 'https://ui.dev/var-let-const/',
-        },
-      ],
-    },
-    {
-      text: 'What does `typeof` do?',
-      answers: {
-        a: 'changes the type of a primitive value',
-        b: 'returns a string describing the type of a value',
-        c: 'determines if a value is primitive',
-        d: 'can tell the difference between arrays and objects',
-      },
-      correct: 'b',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/types#type-typeof',
-        },
-        {
-          text: 'MDN',
-          href:
-            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
-        },
-      ],
-    },
-    // Add more questions here
-  ],
-};
+export const quizData = [
+  {
+    question: 'What is the ancient civilization that revered cats as gods?',
+    answers: ['Egyptian', 'Aztec ', 'Maya', 'Inca'],
+    correct: 'Egyptian',
+  },
+  {
+    question: 'Which of the following is not a cat breed',
+    answers: ['Siamese', 'Labrador', 'Persian', 'Bengal'],
+    correct: 'Labrador',
+  },
+  {
+    question:
+      'In which animated movie is a cat named "Puss in Boots" one of the main characters',
+    answers: ['8888888', 'Shrek 2', '10101010', '78'],
+    correct: 'Shrek 2',
+  },
+  {
+    question: 'Which of the following foods is not safe to feed to a cat?',
+    answers: ['Raw fish', 'Cooked chicken', 'Chocolate', 'Milk'],
+    correct: 'Chocolate',
+  },
+  {
+    question: 'What is a distinctive feature of Siamese cats?',
+    answers: [
+      'Raw fish',
+      'Intense blue eyes and a light-colored fur body',
+      'Chocolate',
+      'Milk',
+    ],
+    correct: 'Intense blue eyes and a light-colored fur body',
+  },
+  {
+    question: 'On average, how many whiskers does a cat have?',
+    answers: ['Raw fish', 'Around 24 to 28 whiskers', 'Chocolate', 'Milk'],
+    correct: 'Around 24 to 28 whiskers',
+  },
+  {
+    question: 'What is the name of the largest cat ever recorded in history?',
+    answers: ['Raw fish', 'Cooked chicken', 'Chocolate', 'Hercules'],
+    correct: 'Hercules',
+  },
+  {
+    question:
+      "What is the name of the famous cat in Charles Perrault's tale that wears boots and a top hat?",
+    answers: ['Puss in Boots', 'Cooked chicken', 'Chocolate', 'Milk'],
+    correct: 'Puss in Boots',
+  },
+  {
+    question:
+      'What is the organ that allows cats to balance themselves when falling from a height?',
+    answers: [
+      'Raw fish',
+      'Cooked chicken',
+      'The inner ear or labyrinth',
+      'Milk',
+    ],
+    correct: 'The inner ear or labyrinth',
+  },
+  {
+    question: 'Which of the following is not a common fur color in cats?',
+    answers: ['Tabby', 'Marbled', 'Plaid', 'Calico'],
+    correct: 'Plaid',
+  },
+];
