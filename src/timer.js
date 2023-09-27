@@ -4,14 +4,9 @@ let minutes = 0;
 let seconds = 0;
 
 const cronometer = document.getElementById("cronometer");
-const playButton = document.getElementById("playButton");
 const resetButton = document.getElementById("resetButton");
 
-// Add event listener to buttons
-playButton.addEventListener("click", function () {
-    startTimer();
-});
-
+//Add event listene to the reset button
 resetButton.addEventListener("click", function () {
     resetTimer();
 });
@@ -32,16 +27,14 @@ function updateTimer() {
     cronometer.textContent = minutesStr + ":" + secondsStr;
 
     if (minutes >= 10) {
-        stopTimer();
-        alert("Game Over");
+        gameOver();
     }
 }
 
-// check if the game is over (10 minutes)
-function startTimer() {
+// Function to start the timer
+export function startTimer() {
     if (!interval) {
         interval = setInterval(updateTimer, 1000);
-        playButton.disabled = true;
     }
 }
 
@@ -49,7 +42,6 @@ function startTimer() {
 function stopTimer() {
     clearInterval(interval);
     interval = null;
-    playButton.disabled = false;
 }
 
 //Function to reset the timer
@@ -60,3 +52,11 @@ function resetTimer() {
     cronometer.textContent = "00:00";
 }
 
+// Function to handle game over
+
+function gameOver() {
+    stopTimer();
+    alert("Game Over");
+}
+
+export { gameOver };
