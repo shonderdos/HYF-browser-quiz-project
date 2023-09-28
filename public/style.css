@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
   background-color: #ebf2fe;
@@ -5,9 +11,11 @@ body {
 
 #welcome-content {
   display: flex;
-  width: 100%;
-  margin: 0;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .flex-item {
@@ -27,8 +35,11 @@ body {
   cursor: pointer;
   transition: 0.6s ease-in-out;
   font-size: 1.5rem;
+ }
+
+ #start-quiz-button{
   margin-top: 100px;
-}
+ }
 
 #start-quiz-button:hover,
 #next-question-button:hover {
@@ -60,6 +71,7 @@ body {
   border-radius: 30px;
 }
 
+/* -------------------------- */
 /* Styling the Progress line */
 .progress-line {
   width: 100vw;
@@ -75,12 +87,13 @@ body {
 
 .progress-line .cat-icon {
   position: absolute;
-  top: 60px;
+  top: 20%;
   left: 0;
-  width: 100px;
+  width: 10w;
   height: auto;
 }
 
+/* -------------------------- */
 /* Styling the player lives and timer */
 .player-lives-timer {
   display: flex;
@@ -105,22 +118,34 @@ body {
 
 /* Styling the answers */
 #answers-list {
-  background-color: #98a7cd;
   padding: 0.6vw;
+  margin: 1vw 4vw;
 }
 
+#answers-list button {
+  border: none;
+  border-radius: 25px;
+  background: #97a6d0;
+  color: white;
+  padding: 0.5vw 2vw;
+  margin: 0.4vw 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+#answers-list button:hover {
+  background: #242e49;
+}
+
+/* ------------------ */
 /* General styles */
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .scrollable {
   height: auto;
-  max-height: 80vh;
   overflow: auto;
 }
 
