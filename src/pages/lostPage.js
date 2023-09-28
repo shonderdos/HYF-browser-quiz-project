@@ -14,6 +14,10 @@ export const initLostPage = () => {
   const playAgainBtn = document.getElementById(PLAY_AGAIN_BUTTON_ID);
 
   playAgainBtn.addEventListener('click', () => {
+    // added by saleh
+    location.reload()
+    
+    // added by ln
     initWelcomePage();
     resetTimer();
     removeGameOverMessage();
