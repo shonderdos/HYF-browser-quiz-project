@@ -6,7 +6,8 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-
+import { initWinPage } from '../pages/winPage.js';
+import { initLostPage } from '../pages/lostPage.js';
 let questionIndex = 0;
 let catLive = 3;
 let roadLength = window.innerWidth;
@@ -48,10 +49,17 @@ export const initQuestionPage = () => {
       if (currentQuestion.correct === targetBtn.target.textContent) {
         targetBtn.target.style.backgroundColor = 'green';
         disableBtns(answersListElement);
-        catProgress += roadLength / 11 ;
+        catProgress += roadLength / 11;
         catHead.style.left = `${catProgress}px`;
-
-        
+        if (questionIndex < 9) {
+          document
+            .getElementById(NEXT_QUESTION_BUTTON_ID)
+            .addEventListener('click', nextQuestion);
+        } else {
+          document
+            .getElementById(NEXT_QUESTION_BUTTON_ID)
+            .addEventListener('click', initWinPage);
+        }
       } else {
         targetBtn.target.style.backgroundColor = 'red';
         targetBtn.target.disabled = true;
@@ -59,7 +67,9 @@ export const initQuestionPage = () => {
         catLiveDiv.removeChild(catLiveDiv.children[0]);
 
         if (catLive === 0) {
-          window.alert('A dog eat Whisker');
+          document
+            .getElementById(NEXT_QUESTION_BUTTON_ID)
+            .addEventListener('click', initLostPage);
         }
       }
     }
@@ -73,9 +83,6 @@ export const initQuestionPage = () => {
   };
 
   // next button ===========================
-  document
-    .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestion);
 };
 
 const nextQuestion = () => {
