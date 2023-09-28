@@ -10,7 +10,7 @@ export const createLostElement = () => {
   <div class="left-content">
     
     <h1>Unfortunately</h1>
-    <p>You have won and you got the cat home. You did a great job!</p>
+    <p>Whiskers lost his way, but you can help him by playing again ;)</p>
     <button id="play-again-button">Play Again</button>
     <img src="imgs/sad-cat.jpg" alt="Image" class="congrats-image">
   </div>
