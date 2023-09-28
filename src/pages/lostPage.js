@@ -1,5 +1,8 @@
 import { createLostElement } from '../views/lostView.js';
 import { USER_INTERFACE_ID, PLAY_AGAIN_BUTTON_ID } from '../constants.js';
+import { initWelcomePage } from '../pages/welcomePage.js';
+import { resetTimer } from './cronometer.js';
+import { removeGameOverMessage } from './cronometer.js';
 
 export const initLostPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -11,6 +14,12 @@ export const initLostPage = () => {
   const playAgainBtn = document.getElementById(PLAY_AGAIN_BUTTON_ID);
 
   playAgainBtn.addEventListener('click', () => {
+    // added by saleh
     location.reload()
+    
+    // added by ln
+    initWelcomePage();
+    resetTimer();
+    removeGameOverMessage();
   });
 };

@@ -9,6 +9,7 @@ import { quizData } from '../data.js';
 import { initWinPage } from '../pages/winPage.js';
 import { initLostPage } from '../pages/lostPage.js';
 import { removeCatLive } from '../helperFunctions.js';
+import { stopTimer } from '../pages/cronometer.js';
 
 let questionIndex = 0;
 let catLive = 3;
@@ -118,6 +119,7 @@ export const initQuestionPage = () => {
 
         // if no more life call lose page, else next question button call next question
         if (catLive === 0) {
+          stopTimer();
           initLostPage();
         } else {
           nextQuestionBtn.addEventListener('click', nextQuestion);
