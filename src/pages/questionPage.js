@@ -58,12 +58,10 @@ export const initQuestionPage = () => {
 
   // function to check answers
   const checkAnswer = (targetBtn) => {
-    
     //if we still have life
     if (catLiveDiv.childNodes.length > 0) {
       // if the question answer is the same as the text on the button
       if (currentQuestion.correct === targetBtn.target.textContent) {
-
         //change the background color of the button to green
         targetBtn.target.style.backgroundColor = '#A1CB41';
 
@@ -73,7 +71,7 @@ export const initQuestionPage = () => {
         //move the cat head on the road to the right
         progress();
 
-        // as we made next question button hidden with CSS, here we remove this CSS rule to show it 
+        // as we made next question button hidden with CSS, here we remove this CSS rule to show it
         nextQuestionBtn.classList.remove('hidden');
 
         // if there are still questions, then next button will call next question function again
@@ -86,7 +84,6 @@ export const initQuestionPage = () => {
 
         // if the wrong answer clicked
       } else {
-
         // move the cat head right
         progress();
 
@@ -128,13 +125,11 @@ export const initQuestionPage = () => {
     }
   };
 
-
   // select road length divid it by quiz question numbers (steps)
   const progress = () => {
     catProgress += roadLength / (quizData.length + 1);
     catHead.style.left = `${catProgress}px`;
   };
-
 
   // loop through all answer buttons and disable them
   const disableBtns = (btnsDiv) => {

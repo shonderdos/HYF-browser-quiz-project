@@ -29,7 +29,6 @@ export const checkAnswer = (targetBtn) => {
         catLiveDiv.removeChild(catLiveDiv.children[0]);
       }
       nextQuestionBtn.classList.remove('hidden');
-      
 
       if (catLive === 0) {
         initLostPage();
