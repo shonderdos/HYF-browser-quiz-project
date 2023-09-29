@@ -18,8 +18,7 @@ export const createQuestionElement = (question) => {
       <img src="imgs/player-live.png" alt="Life Icon 1">
     </div>
     <!-- Timer content -->
-    <div class="timer">
-    <h2> 05:00 </h2>
+    <div id="cronometer" class ="cronometer">
     </div>
   </div>
     <h2>${question}</h2>
