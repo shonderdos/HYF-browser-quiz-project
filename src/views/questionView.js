@@ -22,7 +22,7 @@ export const createQuestionElement = (question) => {
     <h2> 05:00 </h2>
     </div>
   </div>
-    <h1>${question}</h1>
+    <h2>${question}</h2>
 
     <div id="${ANSWERS_LIST_ID}">
     </div>

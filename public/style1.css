@@ -1,3 +1,4 @@
+/* Styling thr Win and Lost pages */
 body {
   margin: 0;
   display: flex;
@@ -45,6 +46,7 @@ body {
   background: #242e49;
   color: white;
   padding: 10px 20px;
+  margin: 10px 0;
   cursor: pointer;
   transition: 0.6s ease-in-out;
   font-size: 1.5rem;
@@ -52,4 +54,23 @@ body {
 
 #play-again-button:hover {
   background: linear-gradient(to right, #242e49, #51618b);
+}
+
+/* ----------------------------- */
+/* For smaller Screen */
+@media (max-width: 600px) {
+  /* Welcome Page */
+  .player-win {
+    flex-direction: column;
+  }
+
+  .left-content {
+    margin: 0 50px;
+    margin-bottom: 20px;
+  }
+
+  .right-content .cat-image {
+    max-width: 70%;
+    height: auto;
+  }
 }

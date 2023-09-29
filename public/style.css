@@ -32,7 +32,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50.-50);
+  transform: translate(-50-50);
   background-color: #ebf2fe;
   color: red;
   font-size: 24px;
@@ -110,7 +110,7 @@ body {
   position: absolute;
   top: 20%;
   left: 0;
-  width: 10w;
+  width: 10vw;
   height: auto;
 }
 
@@ -129,18 +129,21 @@ body {
   border-radius: 30px;
   background-color: #51618b;
   padding: 10px;
-  width: 255px;
+  width: 275px;
+  height: 90px;
 }
 
 .player-lives img {
   margin-right: 10px;
   width: 80px;
 }
-
+/* --------------------- */
 /* Styling the answers */
 #answers-list {
   padding: 0.6vw;
-  margin: 1vw 4vw;
+  margin: 1vw 20vw;
+  display: flex;
+  flex-direction: column;
 }
 
 #answers-list button {
@@ -176,4 +179,27 @@ ul {
 
 .hidden {
   display: none;
+}
+
+/* ----------------------------- */
+/* For smaller Screen */
+@media (max-width: 600px) {
+  /* Welcome Page */
+  #welcome-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #start-quiz-button {
+    margin-top: 10px;
+  }
+
+  /* Player Lives */
+  .player-lives {
+    width: 35vw;
+    height: 12vw;
+  }
+  .player-lives img {
+    margin-right: 10px;
+    width: 50px;
+  }
 }
