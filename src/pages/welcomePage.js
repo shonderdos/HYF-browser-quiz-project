@@ -19,6 +19,7 @@ const startQuiz = () => {
   if (getElapsedTime() > 0) {
     resetTimer();
   }
-  startTimer();
+  
   initQuestionPage();
+  
 };
