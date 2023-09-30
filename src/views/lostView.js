@@ -3,7 +3,7 @@
  * @returns {Element}
  */
 
-import {gameData} from '../data.js'
+import { gameData } from '../data.js';
 
 export const createLostElement = () => {
   const element = document.createElement('div');

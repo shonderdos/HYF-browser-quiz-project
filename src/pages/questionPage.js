@@ -32,8 +32,6 @@ export const initQuestionPage = () => {
 
   // Start the timer
   startTimer(document.getElementById('cronometer'));
-  
-
 
   // select "next-question" button and hide it (we want to show it only if player clicked an answer)
   const nextQuestionBtn = document.getElementById(NEXT_QUESTION_BUTTON_ID);
@@ -65,7 +63,7 @@ export const initQuestionPage = () => {
 
   //create a function to update and display the score
   const updateScore = () => {
-    const scoreDisplay = document.getElementById("scoreDisplay");
+    const scoreDisplay = document.getElementById('scoreDisplay');
     scoreDisplay.textContent = `score: ${gameData.score}`;
   };
 
@@ -161,7 +159,6 @@ export const initQuestionPage = () => {
       btns[i].disabled = true;
     }
   };
-  
 };
 
 const nextQuestion = () => {

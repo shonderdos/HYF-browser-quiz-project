@@ -72,5 +72,5 @@ export const quizData = [
 ];
 
 export const gameData = {
-  score: 0
-}
+  score: 0,
+};

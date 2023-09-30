@@ -1,5 +1,5 @@
 // Import the function from lostPage.js
-import { initLostPage } from "./lostPage.js";
+import { initLostPage } from './lostPage.js';
 
 let interval;
 let minutes = 0;
