@@ -70,3 +70,7 @@ export const quizData = [
     correct: 'Plaid',
   },
 ];
+
+export const gameData = {
+  score: 0
+}

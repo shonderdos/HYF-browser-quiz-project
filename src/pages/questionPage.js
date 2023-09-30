@@ -10,12 +10,11 @@ import { initWinPage } from '../pages/winPage.js';
 import { initLostPage } from '../pages/lostPage.js';
 import { removeCatLive } from '../helperFunctions.js';
 import { stopTimer } from '../pages/cronometer.js';
-
+import { gameData } from '../data.js';
 let questionIndex = 0;
 let catLive = 3;
 let roadLength = window.innerWidth; // this will change maybe
 let catProgress = 0;
-let score = 0;
 
 export const initQuestionPage = () => {
   //select the quiz container and clear all element within it
@@ -60,7 +59,7 @@ export const initQuestionPage = () => {
   //create a functin to updat and display the score
   const updateScore = () => {
     const scoreDisplay = document.getElementById("scoreDisplay");
-    scoreDisplay.textContent = `score: ${score}`;
+    scoreDisplay.textContent = `score: ${gameData.score}`;
   };
 
   // function to check answers
@@ -73,7 +72,7 @@ export const initQuestionPage = () => {
         targetBtn.target.style.backgroundColor = '#A1CB41';
 
         // Increment the score by 7 a correct answer
-        score += 7;
+        gameData.score += 7;
         // Update and display the score
         updateScore();
         // disable all answer's buttons
@@ -107,8 +106,8 @@ export const initQuestionPage = () => {
         // decrease cat life
         catLive--;
 
-        // Deduct 7 points for wrong answer 
-        score -= 7;
+        // Deduct 7 points for wrong answer
+        gameData.score -= 7;
 
         // Upat and disply the score
         updateScore();

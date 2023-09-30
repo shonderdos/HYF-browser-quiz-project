@@ -3,7 +3,7 @@
  * @returns {Element}
  */
 
-
+import {gameData} from '../data.js'
 
 export const createLostElement = () => {
   const element = document.createElement('div');
@@ -14,6 +14,7 @@ export const createLostElement = () => {
 
     <h2>Unfortunately</h2>
     <p>Whiskers lost his way, but you can help him by playing again ;)</p>
+    <p>Your final score was: ${gameData.score}</p>
     <button id="play-again-button">Play Again</button>
     <img src="imgs/sad-cat.jpg" alt="Image" class="congrats-image">
   </div>
