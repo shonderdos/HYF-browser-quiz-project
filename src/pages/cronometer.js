@@ -1,6 +1,7 @@
 //Declare variables for timer and DOM elements
 import { initLostPage } from "./lostPage.js";
 
+
 let interval;
 let minutes = 0;
 let seconds = 0;
@@ -54,3 +55,4 @@ export function resetTimer() {
   seconds = 0;
   cronometer.textContent = '00:00';
 }
+
