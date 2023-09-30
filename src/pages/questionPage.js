@@ -74,7 +74,7 @@ export const initQuestionPage = () => {
 
         // Increment the score by 7 a correct answer
         score += 7;
-        // Updt and display the score
+        // Update and display the score
         updateScore();
         // disable all answer's buttons
         disableBtns(answersListElement);
