@@ -38,6 +38,8 @@ body {
 .congrats-image {
   width: 350px;
   background-color: transparent;
+  border-radius: 20px;
+  padding-top: 10px;
 }
 
 #play-again-button {
@@ -54,6 +56,16 @@ body {
 
 #play-again-button:hover {
   background: linear-gradient(to right, #242e49, #51618b);
+}
+
+.game-over {
+  color: rgb(194, 114, 17);
+  padding: 10px 0;
+}
+.final-score {
+  color: rgb(194, 114, 17);
+  font-size: 1.3em;
+  padding: 10px 0;
 }
 
 /* ----------------------------- */

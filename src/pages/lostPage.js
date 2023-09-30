@@ -13,7 +13,7 @@ export const initLostPage = () => {
 
   playAgainBtn.addEventListener('click', () => {
     // added by saleh
-    location.reload()
+    location.reload();
 
     // added by ln
     initWelcomePage();

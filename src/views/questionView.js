@@ -17,9 +17,16 @@ export const createQuestionElement = (question) => {
       <img src="imgs/player-live.png" alt="Life Icon 1">
       <img src="imgs/player-live.png" alt="Life Icon 1">
     </div>
-    <!-- Timer content -->
-    <div id="cronometer" class ="cronometer">
-    </div>
+   
+    <div class="timer-and-score-container">
+  <!-- Display timer -->
+  <div id="cronometer" class="cronometer"></div>
+  
+  <!-- Display score -->
+  <span id="scoreDisplay" class="scoreDisplay"></span>
+</div>
+
+    
   </div>
     <h2>${question}</h2>
 
