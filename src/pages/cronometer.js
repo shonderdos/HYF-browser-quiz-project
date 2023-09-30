@@ -1,9 +1,12 @@
 //Declare variables for timer and DOM elements
+import { initLostPage } from "./lostPage.js";
+
 let interval;
 let minutes = 0;
 let seconds = 0;
 
 const cronometer = document.getElementById('cronometer');
+
 
 // Function to update the timer
 function updateTimer() {
@@ -20,9 +23,14 @@ function updateTimer() {
   //Update the timer display
   cronometer.textContent = minutesStr + ':' + secondsStr;
 
-  if (minutes >= 10) {
-    gameOver();
+  if (minutes >= 1) {
+    stopTimer();
+    initLostPage();
   }
+}
+
+export function getElapsedTime() {
+  return minutes * 60 + seconds;
 }
 
 // Function to start the timer
@@ -32,25 +40,10 @@ export function startTimer() {
   }
 }
 
-// Function to stop the timer
-let gameOverMessage;
-
 export function stopTimer() {
   if (interval) {
     clearInterval(interval);
     interval = null;
-
-    gameOverMessage = document.createElement('div');
-    gameOverMessage.textContent = 'GAME OVER';
-    gameOverMessage.classList.add('game-over-message');
-
-    document.body.appendChild(gameOverMessage);
-  }
-}
-
-export function removeGameOverMessage() {
-  if (gameOverMessage && gameOverMessage.parentNode) {
-    gameOverMessage.parentNode.removeChild(gameOverMessage);
   }
 }
 

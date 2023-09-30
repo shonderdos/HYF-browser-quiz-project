@@ -21,23 +21,23 @@ body {
 .cronometer {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 20%;
   font-size: 24px;
   background-color: #ebf2fe;
   color: #000;
   padding: 10px;
 }
 
-.game-over-message {
+.scoreDisplay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50-50);
-  background-color: #ebf2fe;
-  color: red;
+  top: 60px;
+  right: 20%;
   font-size: 24px;
-  padding: 10px 20px;
+  background-color: #ebf2fe;
+  color: #000;
+  padding: 10px;
 }
+
 
 .flex-item {
   flex: 1;
@@ -137,6 +137,7 @@ body {
   margin-right: 10px;
   width: 80px;
 }
+
 /* --------------------- */
 /* Styling the answers */
 #answers-list {
@@ -184,11 +185,13 @@ ul {
 /* ----------------------------- */
 /* For smaller Screen */
 @media (max-width: 600px) {
+
   /* Welcome Page */
   #welcome-content {
     display: flex;
     flex-direction: column;
   }
+
   #start-quiz-button {
     margin-top: 10px;
   }
@@ -198,6 +201,7 @@ ul {
     width: 35vw;
     height: 12vw;
   }
+
   .player-lives img {
     margin-right: 10px;
     width: 50px;
